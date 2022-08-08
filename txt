@@ -1,25 +1,26 @@
-Aja’s Simon Says Game:
+// Aja’s Simon Says Game:
 
-Page loads with 4 circles and a start button.
-Need a board array to represent 4 circles in html.
+// Page loads with 4 circles and a start button.
+// Need a board array to represent 4 circles in html.
 
-Player clicks start button to initiate game.
-   create event listener for player clicking start button
-   invoke initialize game function
+// Player clicks start button to initiate game.
+//    create event listener for player clicking start button
+//    invoke initialize game function
 
-Use arrays to keep track of Computer sequence and Player sequence.
+// Use arrays to keep track of Computer sequence and Player sequence.
 
-Each Computer turn - create new round function 
-    have computer randomly click an index from the board array (use Math.random along with Math.floor to get whole number that relates to index from board array).
-    Use DOM to relate on click to which circle in html
-    Add setTimeout to computer sequence when more than 1 click so that all the clicks don’t happen at once.
-    Update computer sequence for each new random click and add to another variable that can be called the new sequence (use .push to add to the array)
+// Each Computer turn - create new round function 
+//     have computer randomly click an index from the board array (use Math.random along with Math.floor to get whole number that relates to index from board array).
+//     Use DOM to relate on click to which circle in html
+//     Add setTimeout to computer sequence when more than 1 click so that all the clicks don’t happen at once.
+//     Update computer sequence for each new random click and add to another variable that can be called the new sequence (use .push to add to the array)
 
-Each Player turn - starts when Computer ends current sequence
-    Use DOM to relate on click to which circle in html again
-    Use new function to check if player can move on to the next round by seeing if Players sequence is equal to Computers new sequence
-    Invoke new round function if players sequence matches computer sequence
-        Return that they can keep playing - use textContent
-    Else if the players sequence does not equal the computers sequence 
-        Return that the player lost - use textContent and refresh game with init game function 
-    Use setTimeout function to display lost game before restarting 
+// Each Player turn - starts when Computer ends current sequence
+//     Use DOM to relate on click to which circle in html again
+//     Use new function to check if player can move on to the next round by seeing if Players sequence is equal to Computers new sequence
+//     Invoke new round function if players sequence matches computer sequence
+//         Return that they can keep playing - use textContent
+//     Else if the players sequence does not equal the computers sequence 
+//         Return that the player lost - use textContent and refresh game with init game function 
+//     Use setTimeout function to display lost game before restarting 
+

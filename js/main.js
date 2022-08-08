@@ -23,59 +23,25 @@ playButton.addEventListener('click', initGame);
 // Pushing new click to simon's sequence 
 const boards = ['one', 'two', 'three', 'four']; 
 
-function simonNewClick() {
-    let newClick = boards[Math.floor(Math.random() * boards.length)];
+function newClick() {
+    let boardClick = boards[Math.floor(Math.random() * boards.length)];
     playerTurn = true;
-    return newClick;
+    return boardClick;
 }
-simonSequence.push(simonNewClick());
+simonSequence.push(newClick());
 
 
-// Make buttons turn to white on click and setting timeout to 250
-// I know theres a way to get all these event listeners into one function 
-// but this is how i can get it working on the board for now. 
-// const one = document.getElementById('one');
-// one.addEventListener('click', function onClick() {
-//     one.style.backgroundColor = 'white';
-//     setTimeout(() => {
-//         one.style.backgroundColor = '';
-//     }, 250);
-// });
-
-// const two = document.getElementById('two');
-// two.addEventListener('click', function onClick() {
-//     two.style.backgroundColor = 'white';
-//     setTimeout(() => {
-//         two.style.backgroundColor = '';
-//     }, 250);
-// });
-
-// const three = document.getElementById('three');
-// three.addEventListener('click', function onClick() {
-//     three.style.backgroundColor = 'white';
-//     setTimeout(() => {
-//         three.style.backgroundColor = '';
-//     }, 250);
-// });
-
-// const four = document.getElementById('four');
-// four.addEventListener('click', function onClick() {
-//     four.style.backgroundColor = 'white';
-//     setTimeout(() => {
-//         four.style.backgroundColor = '';
-//     }, 250);
-// });
-
-
-
-// trying to get all these above in a function
+// figured out how to get all these event listeners into one function yay! 
+// will need to call this function when rendering new sequence?
+function colorChange() {
 let buttons = document.querySelectorAll('.game-button');
-buttons.forEach(function(item) {
-    item.addEventListener('click', function onClick() {
-        item.style.backgroundColor = 'white';
-        setTimeout(() => {
-            item.style.backgroundColor = '';
-        }, 250);
+    buttons.forEach(function(item) {
+        item.addEventListener('click', function onClick() {
+            item.style.backgroundColor = 'white';
+            setTimeout(function() {
+                item.style.backgroundColor = '';
+            }, 200);
+        });
     });
-});
-    
+};  
+colorChange();
