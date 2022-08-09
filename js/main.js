@@ -19,20 +19,13 @@ playButton.addEventListener('click', initGame);
 
 // initiate new game -> newRound
 function initGame() {
-    simonSequence = null;
+    simonSequence = [];
     simonTurn = true;
     updateMessage.textContent = 'Try to keep up!';
     newRound();
 };
 
-
-// simon starts a new round
-// newRound calls newClick and 
-function newRound() {
-    simonSequence.push(newClick());
-    playerTurn = true;
-}
-
+ 
 
 // calling for newClick in each newRound  
 // i think i was making this too complicated so simplified but not sure if it still will work
@@ -40,6 +33,25 @@ function newClick() {
     const boards = ['one', 'two', 'three', 'four']; 
     return Math.floor(Math.random() * boards.length);
 };
+
+
+
+// simon starts a new round
+// newRound calls newClick and 
+function newRound() {
+    let newSequence = [simonSequence.push(newClick())];
+    playerTurn = true;
+    playGame(newSequence);
+};
+
+
+
+// //now we play the game - this is where i should call colorchange 
+// function playGame(newSequence) {
+//     newSequence.forEach(colorChange() {
+
+//     });
+// }
 
 
 
