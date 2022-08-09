@@ -7,9 +7,8 @@ let playerTurn;
 
 
 // grabbing play button and update message 
-
 const playButton = document.querySelector('.play-button');
-let updateMessage = document.querySelector('.update');
+const updateMessage = document.querySelector('.update');
 
 
 
@@ -27,7 +26,7 @@ function initGame() {
 };
 
 
-//simon starts a new round
+// simon starts a new round
 // newRound calls newClick and 
 function newRound() {
     simonSequence.push(newClick());
@@ -35,18 +34,12 @@ function newRound() {
 }
 
 
-// Creating array to represent 4 board buttons
-// Creating function for new click by simon, needs to be random choice, rounded number within board length. 
-// Now the players turn 
-// Pushing new click to simon's sequence 
+// calling for newClick in each newRound  
+// i think i was making this too complicated so simplified but not sure if it still will work
 function newClick() {
     const boards = ['one', 'two', 'three', 'four']; 
     return Math.floor(Math.random() * boards.length);
 };
-
-
-
-
 
 
 
