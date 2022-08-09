@@ -46,17 +46,17 @@ function newRound() {
 
 
 
-// //now we play the game - this is where i should call colorchange 
-// function playGame(newSequence) {
-//     newSequence.forEach(colorChange() {
-
-//     });
-// }
+//now we play the game - this is where i should call colorchange 
+function playGame(newSequence) {
+    newSequence.forEach(function(board) {
+        colorChange(board);
+    });
+};
 
 
 
 // figured out how to get all these event listeners into one function yay! 
-// will need to call this function when rendering new sequence?
+// will need to call this function in play game
 function colorChange() {
     let buttons = document.querySelectorAll('.game-button');
     buttons.forEach(function(item) {
