@@ -4,7 +4,7 @@ html {
 body {
     display: flex;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: rgb(254, 214, 214);
 }
 h1 {
     text-align: center;
@@ -25,6 +25,9 @@ h3 {
     width: 150px;
     border-radius: 50%;
     border-color: black;
+}
+.active {
+    background-color: white;
 }
 #green {
     background-color: rgb(150, 248, 215);
@@ -63,9 +66,7 @@ h3 {
     margin-top: 5%;
 }
 
-#one.active, #two.active, #three.active, #four.active {
-    background-color: white;
-}
+
 
 
   
