@@ -26,22 +26,22 @@ h3 {
     border-radius: 50%;
     border-color: black;
 }
-#one {
+#green {
     background-color: rgb(150, 248, 215);
     padding-top: 100%;
     margin-right: 10px;
 }
-#two {
+#orange {
     background-color: rgb(246, 166, 101);
     padding-top: 100%;
     margin-right: 5px;
 }
-#three {
+#blue {
     background-color: rgb(140, 223, 248);
     padding-top: 100%;
     margin-left: 5px;
 }    
-#four {
+#pink {
     background-color: rgb(241, 141, 201);
     padding-top: 100%;
     margin-left: 20px;
@@ -61,6 +61,10 @@ h3 {
     text-align: center;
     font-size: 20px;
     margin-top: 5%;
+}
+
+.active {
+    background-color: white;
 }
 
   
