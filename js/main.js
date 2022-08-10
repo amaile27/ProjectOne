@@ -12,7 +12,7 @@ const playButton = document.querySelector('.play-button');
 const updateMessage = document.querySelector('.update');
 
 
-// event listener
+// event listener to start game
 playButton.addEventListener('click', initGame);
 
 
@@ -33,8 +33,8 @@ function newRound() {
     let newSequence = [simonSequence.push(newClick())];
     playerTurn = true;
     return newSequence;
-    showMoves(item);
 };
+showMoves(board);
 
 
 
@@ -45,7 +45,8 @@ function newClick() {
     return randomClick;
 };
 
-// great idea from kenny in office hours - I want to call this function above in newround but it won't let me. Off to take a break.
+// great idea from kenny in office hours 
+// I want to call this function above in newround but it won't let me. Off to take a break.
 function showMoves(board) {
     
     switch (board){
@@ -77,10 +78,8 @@ function showMoves(board) {
  };
 
 
-//now we play the game - this is where i should call colorchange 
 
-
-
+//Might still need this code below for player?
 
 // // figured out how to get all these event listeners into one function yay! 
 // // will need to call this function in play game

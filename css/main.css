@@ -63,8 +63,9 @@ h3 {
     margin-top: 5%;
 }
 
-.active {
+#one.active, #two.active, #three.active, #four.active {
     background-color: white;
 }
+
 
   
